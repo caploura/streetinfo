@@ -17,7 +17,7 @@ const streetDiv = ({
 const data = [
   {
     title: 'Wibautstraat',
-    image: '/photo4.jpeg',
+    image: '/photo2.jpeg',
     mapsLink: 'https://maps.app.goo.gl/DqFymgFQjeTVfJ7w7',
     text: `É nesta rua que vivemos actualmente. Mudamo-nos dia 31 de Dezembro de 2022, prontos para passar o ano e começar uma nova aventura numa nova cidade, numa nova casa, e para a Joana, num novo trabalho. Depois de 5 anos em Maastricht, decidimos mudar para uma cidade maior, mais activa e internacional. Foi uma mudança que queríamos há muito tempo e tal como esperávamos, tem sido uma viagem inesquecível.`
   },
@@ -108,7 +108,7 @@ const data = [
   },
   {
     title: 'Zaanse Schans',
-    image: '/photo2.jpeg',
+    image: '/photo9.jpeg',
     mapsLink: 'https://maps.app.goo.gl/WtayaT6HFpXWyUbW6',
     text: `Não há ninguém que nos venha visitar e não passe por estes moinhos! Estão localizados estrategicamente numa das zonas mais ventosas do país. Parece uma mini aldeia com lojinhas, prova de queijos, museus, cafés, ideal para uma tarde bem passada. É um lugar que não nos cansamos de visitar e que sempre nos surpreende! Casinhas e moinhos de todas as cores e feitios. Para nós passou a ser um sítio onde estamos com amigos e família e, como tal, um lugar muito especial!`
   },
