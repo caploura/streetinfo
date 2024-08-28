@@ -8,9 +8,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link href='https://fonts.googleapis.com/css?family=Crimson Pro' rel='stylesheet'/>
-      </head>
       <body>{children}</body>
     </html>
   );
