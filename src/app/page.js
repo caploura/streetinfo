@@ -9,7 +9,7 @@ const streetDiv = ({
   return <div className={styles.streetDiv}>
     <h1>{ title }</h1>
     <a href={mapsLink} className={styles.mapsLink}>Ver no mapa</a>
-    <p>{ text }</p>
+    <p className={styles.streetText}>{ text }</p>
   </div>
 }
 

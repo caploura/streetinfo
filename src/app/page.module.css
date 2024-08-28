@@ -17,6 +17,10 @@
   padding-bottom: 1rem;
 }
 
+.streetText {
+  text-align: justify;
+}
+
 /* Mobile */
 @media (max-width: 750px) {
 
