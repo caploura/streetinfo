@@ -6,7 +6,7 @@ const streetDiv = ({
   text,
 }) => {
   return <div className={styles.streetDiv}>
-    <h1>{ title }</h1>
+    <h1 className={styles.streetTitle}>{ title }</h1>
     <a href={mapsLink} className={styles.mapsLink}>Ver no mapa</a>
     <p className={styles.streetText}>{ text }</p>
   </div>
