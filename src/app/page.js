@@ -8,9 +8,9 @@ const streetDiv = ({
 }) => {
   return <div className={styles.streetDiv}>
     <h1 className={styles.streetTitle}>{ title }</h1>
-    { image && <img src={image} alt={image} className={styles.streetImage} /> }
     <a href={mapsLink} className={styles.mapsLink} target="_blank">Ver no mapa</a>
     <p className={styles.streetText}>{ text }</p>
+    { image && <img src={image} alt={image} className={styles.streetImage} /> }
   </div>
 }
 
