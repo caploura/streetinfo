@@ -7,8 +7,6 @@
 
 .streetDiv {
   padding: 0 6rem 2rem 6rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .streetDiv:first-child {
