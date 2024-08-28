@@ -11,10 +11,6 @@
   margin: 0;
 }
 
-a {
-  color: black
-}
-
 html,
 body {
   max-width: 100vw;
@@ -22,17 +18,23 @@ body {
   background-color: #edede9;
 }
 
-h1, h2, h3, h4, h5, h6  {
-  padding-bottom: 1.5rem;
-  color: #707F62;
-}
-
 h1, h2, h3, h4, h5, h6, p  {
   font-weight: 350;
-  font-family: 'Crimson Pro';
+  font-family: 'Crimson Pro', serif;
+}
+
+h1, h2, h3, h4, h5, h6  {
+  padding-bottom: 1rem;
+  color: #707F62;
+  font-size: 2rem;
 }
 
 p {
   line-height: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+}
+
+a {
+  color: black;
+  font-size: 1.15rem;
 }

@@ -1,7 +1,7 @@
 .main {
   margin: auto;
-  max-width: var(--max-width);
   background-color: white;
+  max-width: var(--max-width);
   border-radius: var(--border-radius);
 }
 
