@@ -7,6 +7,8 @@
 
 .streetDiv {
   padding: 0 6rem 2rem 6rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .streetDiv:first-child {
@@ -15,6 +17,12 @@
 
 .streetDiv:last-child {
   padding-bottom: 6rem;
+}
+
+.streetImage {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
 }
 
 .streetTitle {

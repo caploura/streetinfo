@@ -2,11 +2,13 @@ import styles from "./page.module.css";
 
 const streetDiv = ({
   title,
+  image,
   mapsLink,
   text,
 }) => {
   return <div className={styles.streetDiv}>
     <h1 className={styles.streetTitle}>{ title }</h1>
+    { image && <img src={image} alt={image} className={styles.streetImage} /> }
     <a href={mapsLink} className={styles.mapsLink} target="_blank">Ver no mapa</a>
     <p className={styles.streetText}>{ text }</p>
   </div>
@@ -15,6 +17,7 @@ const streetDiv = ({
 const data = [
   {
     title: 'Wibautstraat',
+    image: '/photo4.jpeg',
     mapsLink: 'https://maps.app.goo.gl/DqFymgFQjeTVfJ7w7',
     text: `É nesta rua que vivemos actualmente. Mudamo-nos dia 31 de Dezembro de 2022, prontos para passar o ano e começar uma nova aventura numa nova cidade, numa nova casa, e para a Joana, num novo trabalho. Depois de 5 anos em Maastricht, decidimos mudar para uma cidade maior, mais activa e internacional. Foi uma mudança que queríamos há muito tempo e tal como esperávamos, tem sido uma viagem inesquecível.`
   },
@@ -30,6 +33,7 @@ const data = [
   },
   {
     title: 'Avenue Ceramique',
+    image: '/photo1.jpeg',
     mapsLink: 'https://maps.app.goo.gl/inNTMdCczhMEj7Bv6',
     text: `Esta avenida foi a nossa primeira casa em conjunto. Foi aqui que decidimos juntar os nossos trapinhos. Ficava ao pé do rio Maas, e tinha um belo jardim para o Alpha poder passear. O apartamento era grande, com dois quartos e ainda uma pequena marquise onde fizemos o nosso escritório. Vivemos durante dois anos aqui e foi onde fizemos todos os nossos planos futuros.`
   },
@@ -40,6 +44,7 @@ const data = [
   },
   {
     title: 'Vrijthof',
+    image: '/photo3.jpeg',
     mapsLink: 'https://maps.app.goo.gl/Hzn27rGmX2bj6dNn9',
     text: `A famosa praça de Maastricht. Palco para os concertos de André Rieu que enchem a cidade durante duas semanas em Julho. Este ilustre maestro nasceu em Maastricht e como tal faz aqui os seus maiores concertos. Vêm pessoas de todo o mundo e há a hipótese de jantar enquanto ouvimos as belas canções. Nesta praça estão situadas umas das mais bonitas igrejas da cidade, caracterizadas pelas suas cores berrantes. Fizemos muitos planos nesta praça, desde festivais, concertos, apanhar sol, festejar o carnaval a simplesmente estar numa esplanada.`
   },
@@ -55,6 +60,7 @@ const data = [
   },
   {
     title: 'Sint Pietersberg',
+    image: '/photo7.jpeg',
     mapsLink: 'https://maps.app.goo.gl/XyQvjma9viKmdJry7',
     text: `O ponto mais alto de Maastricht e onde se situa o forte da cidade. Com uma vista maravilhosa, é um dos melhores sítios para ver o por do sol. Quando o tempo holandês permitia fazíamos aqui longas caminhadas, picnics e aproveitar o sol. Sem dúvida um dos sítios preferidos do Alpha, onde podia correr a vontade e tinha parques só para cães. No fundo deste gigante de pedra havia uma pequena capela, sempre bem cuidada e com velas acesas, intimista e acolhedora, onde tirávamos uns minutos para respirar.`
   },
@@ -70,6 +76,7 @@ const data = [
   },
   {
     title: 'Koestraat',
+    image: '/photo6.jpeg',
     mapsLink: 'https://maps.app.goo.gl/53UT8K1jzrBrnC7J9',
     text: `A rua da vaca (Koestraat, traduzindo à letra). Muito estreita, bem decorada e acolhedora, é ainda hoje uma das ruas mais bonitas para nós. No natal é imperdível toda a iluminação característica. Esta rua pitoresca embora pequena, tem muita vida, e proporcionou-nos excelentes experiências como provas de queijos e vinhos, e também iguarias portuguesas no único restaurante português da cidade. Aqui podíamos ter um bocadinho de tudo, desde um brunch para um domingo de manha, a uma sessão de jazz a uma quinta à noite.`
   },
@@ -85,6 +92,7 @@ const data = [
   },
   {
     title: 'Diepstraat',
+    image: '/photo8.jpeg',
     mapsLink: 'https://maps.app.goo.gl/CYafHqjMAP7BNaqt7',
     text: `Numa vila no norte de Limburgo, situa-se a primeira clinica dentária onde a Joana trabalhou. Ficou lá durante 5 anos e foi recebida de braços abertos. Uma clinica moderna e familiar, passou de geração em geração e está activa há mais de 75 anos. Os chefes deram todo o apoio necessário a uma excelente adaptação. Primeiro trabalho, país diferente, língua diferente, a ajuda deles foi imprescindível e ainda hoje lhes estou eternamente grata por tudo o que fizeram por mim e por tudo o que me ensinaram.`
   },
@@ -100,6 +108,7 @@ const data = [
   },
   {
     title: 'Zaanse Schans',
+    image: '/photo2.jpeg',
     mapsLink: 'https://maps.app.goo.gl/WtayaT6HFpXWyUbW6',
     text: `Não há ninguém que nos venha visitar e não passe por estes moinhos! Estão localizados estrategicamente numa das zonas mais ventosas do país. Parece uma mini aldeia com lojinhas, prova de queijos, museus, cafés, ideal para uma tarde bem passada. É um lugar que não nos cansamos de visitar e que sempre nos surpreende! Casinhas e moinhos de todas as cores e feitios. Para nós passou a ser um sítio onde estamos com amigos e família e, como tal, um lugar muito especial!`
   },
