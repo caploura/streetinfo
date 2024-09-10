@@ -6,10 +6,10 @@ const streetDiv = ({
   mapsLink,
   text,
 }) => {
-  return <div className={styles.streetDiv}>
-    <h1 className={styles.streetTitle}>{ title }</h1>
-    <a href={mapsLink} className={styles.mapsLink} target="_blank">Ver no mapa</a>
-    <p className={styles.streetText}>{ text }</p>
+  return <div className={styles.streetDiv} key={title || 'initial'}>
+    { title && <h1 className={styles.streetTitle}>{ title }</h1>}
+    { mapsLink && <a href={mapsLink} className={styles.mapsLink} target="_blank">Ver no mapa</a>}
+    { text && <p className={styles.streetText}>{ text }</p> }
     { image && <img src={image} alt={image} className={styles.streetImage} loading="lazy" /> }
   </div>
 }
@@ -19,7 +19,7 @@ const data = [
     title: 'Wibautstraat',
     image: '/photo2.jpeg',
     mapsLink: 'https://maps.app.goo.gl/DqFymgFQjeTVfJ7w7',
-    text: `É nesta rua que vivemos actualmente. Mudamo-nos dia 31 de Dezembro de 2022, prontos para passar o ano e começar uma nova aventura numa nova cidade, numa nova casa, e para a Joana, num novo trabalho. Depois de 5 anos em Maastricht, decidimos mudar para uma cidade maior, mais activa e internacional. Foi uma mudança que queríamos há muito tempo e tal como esperávamos, tem sido uma viagem inesquecível.`
+    text: `É nesta rua que vivemos atualmente. Mudamo-nos dia 31 de Dezembro de 2022, prontos para passar o ano e começar uma nova aventura numa nova cidade, numa nova casa, e para a Joana, num novo trabalho. Depois de 5 anos em Maastricht, decidimos mudar para uma cidade maior, mais activa e internacional. Foi uma mudança que queríamos há muito tempo e tal como esperávamos, tem sido uma viagem inesquecível.`
   },
   {
     title: 'Kleine Gracht',
@@ -35,7 +35,7 @@ const data = [
     title: 'Avenue Ceramique',
     image: '/photo1.jpeg',
     mapsLink: 'https://maps.app.goo.gl/inNTMdCczhMEj7Bv6',
-    text: `Esta avenida foi a nossa primeira casa em conjunto. Foi aqui que decidimos juntar os nossos trapinhos. Ficava ao pé do rio Maas, e tinha um belo jardim para o Alpha poder passear. O apartamento era grande, com dois quartos e ainda uma pequena marquise onde fizemos o nosso escritório. Vivemos durante dois anos aqui e foi onde fizemos todos os nossos planos futuros.`
+    text: `Nesta avenida foi a nossa primeira casa em conjunto. Foi aqui que decidimos juntar os nossos trapinhos. Ficava ao pé do rio Maas, e tinha um belo jardim para o Alpha poder passear. O apartamento era grande, com dois quartos e ainda uma pequena marquise onde fizemos o nosso escritório. Vivemos durante dois anos aqui e foi onde fizemos todos os nossos planos futuros.`
   },
   {
     title: 'Onzelievevrouw',
@@ -56,7 +56,7 @@ const data = [
   {
     title: 'Wycker Burgstraat',
     mapsLink: 'https://maps.app.goo.gl/rJuWEXtNe336LBXHA',
-    text: `Uma das principais ruas de Maastricht, liga a estação central ao centro histórico. Aqui o que não falta são restaurantes, lojas e bares, entre eles o pub John Mullins onde nos começámos a conhecer melhor durante um Derbi Benfica vs Sporting. Entre festejos, brindes e muitas gargalhadas percebemos que temos bastante em comum. Este bar foi marcante para nós e voltámos muitas vezes. As pints de Guiness e os melhores nachos que ja comemos, eram o nosso prato do dia. Às terças feiras havia pub quizz e a nossa grupeta ganhou uma vez!`
+    text: `Uma das principais ruas de Maastricht, liga a estação central ao centro histórico. Aqui o que não falta são restaurantes, lojas e bares, entre eles o pub John Mullins onde nos começámos a conhecer melhor durante um Derbi Benfica vs Sporting. Entre festejos, brindes e muitas gargalhadas percebemos que temos bastante em comum. Este bar foi marcante para nós e voltámos muitas vezes. As pints de Guiness e os melhores nachos que já comemos, eram o nosso prato do dia. Às terças feiras havia pub quizz e a nossa grupeta ganhou uma vez!`
   },
   {
     title: 'Sint Pietersberg',
@@ -67,12 +67,12 @@ const data = [
   {
     title: 'Château Neercanne',
     mapsLink: 'https://maps.app.goo.gl/P4QKfb5W8sCFcLkV8',
-    text: `Este castelo situa-se mesmo na fronteira entre a Holanda e a Bélgica, a 10 minutos de bicicleta da nossa casa. Famoso pelos seus jardins, trilhos e grutas o Château Nercanne permite-nos viajar no tempo especialmente durante a pandemia quando não tínhamos a liberdade para fazer o que quiséssemos. Tem também um restaurante com estrela Michellin, portanto era sempre um ótimo plano para experimentar novas iguarias! É um local escolhido por muitos para casar e ainda chegamos a imaginar como seria fazermos a nossa festa por lá.`
+    text: `Este castelo situa-se mesmo na fronteira entre a Holanda e a Bélgica, a 10 minutos de bicicleta da nossa casa. Famoso pelos seus jardins, trilhos e grutas o Château Nercanne permite-nos viajar no tempo especialmente durante a pandemia quando não tínhamos a liberdade para fazer o que quiséssemos. Tem também um restaurante com estrela Michelin, portanto era sempre um ótimo plano para experimentar novas iguarias! É um local escolhido por muitos para casar e ainda chegamos a imaginar como seria fazermos a nossa festa por lá.`
   },
   {
     title: 'Oude Lindestraat',
     mapsLink: 'https://maps.app.goo.gl/LVuHjsKs7Dn8ppSE6',
-    text: `Esta pequena rua fica situada em Heerlen, uma pequena vila a 20 minutos de Maastricht. Foi aqui a primeira empresa onde o Carlos trabalhou na Holanda. Assim começou a sua aventura Holandesa, num escritório com mesas de ping-pong, snooker e matraquilhos a adaptação foi fácil! Nesta vila, pouco mais havia para fazer. Alguns restaurantes e lojas, um pequeno cinema e um jardim agradavel e familiar.`
+    text: `Esta pequena rua fica situada em Heerlen, uma pequena vila a 20 minutos de Maastricht. Foi aqui a primeira empresa onde o Carlos trabalhou na Holanda. Assim começou a sua aventura Holandesa, num escritório com mesas de ping-pong, snooker e matraquilhos a adaptação foi fácil! Nesta vila, pouco mais havia para fazer. Alguns restaurantes e lojas, um pequeno cinema e um jardim agradável e familiar.`
   },
   {
     title: 'Koestraat',
@@ -83,7 +83,7 @@ const data = [
   {
     title: 'Brouwersgracht',
     mapsLink: 'https://maps.app.goo.gl/vd67jYdXT9ENvCeYA',
-    text: `É uma tipica do centro de amesterdao que poderia ser apenas mais uma, não tivesse o Carlos escolhido o restaurante perfeito para fazer o pedido de casamento. O De Belhamel é considerado o restaurante mais romântico da cidade e foi palco de um dos momentos mais felizes para nós. Depois de uma refeição espetacular a Joana disse o “SIM” e hoje cá estamos nós todos em festa.`
+    text: `É uma rua típica do centro de Amesterdão que poderia ser apenas mais uma, não tivesse o Carlos escolhido o restaurante perfeito para fazer o pedido de casamento. O De Belhamel é considerado o restaurante mais romântico da cidade e foi palco de um dos momentos mais felizes para nós. Depois de uma refeição espetacular a Joana disse o “SIM” e hoje cá estamos nós todos em festa.`
   },
   {
     title: 'Bakkerstraat',
@@ -94,7 +94,7 @@ const data = [
     title: 'Diepstraat',
     image: '/photo8.jpeg',
     mapsLink: 'https://maps.app.goo.gl/CYafHqjMAP7BNaqt7',
-    text: `Numa vila no norte de Limburgo, situa-se a primeira clinica dentária onde a Joana trabalhou. Ficou lá durante 5 anos e foi recebida de braços abertos. Uma clinica moderna e familiar, passou de geração em geração e está activa há mais de 75 anos. Os chefes deram todo o apoio necessário a uma excelente adaptação. Primeiro trabalho, país diferente, língua diferente, a ajuda deles foi imprescindível e ainda hoje lhes estou eternamente grata por tudo o que fizeram por mim e por tudo o que me ensinaram.`
+    text: `Numa vila no norte de Limburgo, situa-se a primeira clinica dentária onde a Joana trabalhou. Ficou lá durante 5 anos e foi recebida de braços abertos. Uma clínica moderna e familiar, passou de geração em geração e está ativa há mais de 75 anos. Os chefes deram todo o apoio necessário a uma excelente adaptação. Primeiro trabalho, país diferente, língua diferente, a ajuda deles foi imprescindível e ainda hoje lhes estou eternamente grata por tudo o que fizeram por mim e por tudo o que me ensinaram.`
   },
   {
     title: 'Theater Tuschinski',
@@ -110,7 +110,7 @@ const data = [
     title: 'Zaanse Schans',
     image: '/photo9.jpeg',
     mapsLink: 'https://maps.app.goo.gl/WtayaT6HFpXWyUbW6',
-    text: `Não há ninguém que nos venha visitar e não passe por estes moinhos! Estão localizados estrategicamente numa das zonas mais ventosas do país. Parece uma mini aldeia com lojinhas, prova de queijos, museus, cafés, ideal para uma tarde bem passada. É um lugar que não nos cansamos de visitar e que sempre nos surpreende! Casinhas e moinhos de todas as cores e feitios. Para nós passou a ser um sítio onde estamos com amigos e família e, como tal, um lugar muito especial!`
+    text: `Não há ninguém que nos venha visitar e não passe por estes moinhos! Estão localizados estrategicamente numa das zonas mais ventosas do país. Parece uma mini aldeia com lojinhas, prova de queijos, museus, cafés, ideal para uma tarde bem passada. É um lugar que não nos cansamos de visitar e que nos surpreende sempre! Casinhas e moinhos de todas as cores e feitios. Para nós passou a ser um sítio onde estamos com amigos e família e, como tal, um lugar muito especial!`
   },
   {
     title: 'Keukenhof',
@@ -119,9 +119,12 @@ const data = [
   },
 ];
 
+const initialText = 'Olá a todos!!! Esperamos que se estejam a divertir tanto como nós! Juntamos aqui os nossos sítios preferidos e mais especiais para nós! Desta maneira conseguimos partilhar convosco um bocadinho da nossa história. E fica desde já o convite feito para nos virem visitar!';
+
 export default function Home() {
   return (
     <main className={styles.main}>
+      <div className={styles.streetDiv}><p className={styles.streetText}>{ initialText }</p></div>
       { data.map(streetDiv) }
     </main>
   );
